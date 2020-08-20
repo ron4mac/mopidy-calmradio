@@ -13,37 +13,37 @@ logger = logging.getLogger(__name__)
 
 class Extension(ext.Extension):
 
-    dist_name = "Mopidy-CalmRadio"
-    ext_name = "calmradio"
-    version = __version__
+	dist_name = "Mopidy-CalmRadio"
+	ext_name = "calmradio"
+	version = __version__
 
-    def get_default_config(self):
-        return config.read(pathlib.Path(__file__).parent / "ext.conf")
+	def get_default_config(self):
+		return config.read(pathlib.Path(__file__).parent / "ext.conf")
 
-    def get_config_schema(self):
-        schema = super().get_config_schema()
-        # TODO: Comment in and edit, or remove entirely
-        #schema["username"] = config.String()
-        #schema["password"] = config.Secret()
-        return schema
+	def get_config_schema(self):
+		schema = super().get_config_schema()
+		# TODO: Comment in and edit, or remove entirely
+		#schema["username"] = config.String()
+		#schema["password"] = config.Secret()
+		return schema
 
-    def setup(self, registry):
-        # You will typically only implement one of the following things
-        # in a single extension.
+	def setup(self, registry):
+		# You will typically only implement one of the following things
+		# in a single extension.
 
-        # TODO: Edit or remove entirely
-        from .frontend import FoobarFrontend
-        registry.add("frontend", FoobarFrontend)
+		# TODO: Edit or remove entirely
+#		from .frontend import FoobarFrontend
+#		registry.add("frontend", FoobarFrontend)
 
-        # TODO: Edit or remove entirely
-        from .backend import FoobarBackend
-        registry.add("backend", FoobarBackend)
+		# TODO: Edit or remove entirely
+		from .backend import CalmRadioBackend
+		registry.add("backend", CalmRadioBackend)
 
-        # TODO: Edit or remove entirely
-        registry.add(
-            "http:static",
-            {
-                "name": self.ext_name,
-                "path": str(pathlib.Path(__file__).parent / "static"),
-            },
-        )
+		# TODO: Edit or remove entirely
+#		registry.add(
+#			"http:static",
+#			{
+#				"name": self.ext_name,
+#				"path": str(pathlib.Path(__file__).parent / "static"),
+#			},
+#		)

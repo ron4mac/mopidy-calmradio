@@ -43,6 +43,7 @@ Project resources
 - `Source code <https://github.com/ron4mac/mopidy-calmradio>`_
 - `Issue tracker <https://github.com/ron4mac/mopidy-calmradio/issues>`_
 - `Changelog <https://github.com/ron4mac/mopidy-calmradio/blob/master/CHANGELOG.rst>`_
+- `Development branch tarball <https://github.com/ron4mac/mopidy-calmradio/tarball/master#egg=Mopidy-CalmRadio-dev>`_
 
 
 Credits
